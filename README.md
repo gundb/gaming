@@ -1,6 +1,8 @@
 # gaming
 No frills p2p gaming server.
 
+**Please send us your game! We'd love to list it and help advertise it!**
+
 Deploy your own with:
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
@@ -13,7 +15,8 @@ And then connect to it from any page via:
     <script src="https://rawgit.com/amark/gun/master/gun.js"></script>
     <script src="https://rawgit.com/amark/gun/master/lib/nts.js"></script>
     <script>
-      var gun = Gun("http://gungame.herokuapp.com/gun"); // Or your gaming server (Please run your own!)
+      // You can use this gaming server for testing, but please run your own!
+      var gun = Gun("https://gungame.herokuapp.com/gun");
       var game = gun.get("your-alias/your-game-name");
     </script>
   </head>
