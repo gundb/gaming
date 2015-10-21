@@ -2,7 +2,10 @@ var port = process.env.OPENSHIFT_NODEJS_PORT || process.env.VCAP_APP_PORT || pro
 
 var Gun = require('gun');
 var gun = Gun({ 
-	file: false
+	file: false,
+	hooks: {put: function(g,cb){
+		cb("Gaming server is in memory only.");
+	}}
 });
 
 var server = require('http').createServer(function(req, res){
