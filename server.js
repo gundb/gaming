@@ -9,7 +9,7 @@ var gun = Gun({
 });
 
 var server = require('http').createServer(function(req, res){
-	if(gun.server(req, res)){ 
+	if(gun.wsp.server(req, res)){ 
 		return; // filters gun requests!
 	}
 	require('fs').createReadStream(require('path').join(__dirname, req.url)).on('error',function(){ // static files!
