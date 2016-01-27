@@ -3,7 +3,7 @@ var port = process.env.OPENSHIFT_NODEJS_PORT || process.env.VCAP_APP_PORT || pro
 var Gun = require('gun');
 var gun = Gun({ 
 	file: false,
-	hooks: {put: function(g,cb){
+	wire: {put: function(g,cb){
 		cb("Gaming server is in memory only.");
 	}}
 });
@@ -17,7 +17,7 @@ var server = require('http').createServer(function(req, res){
 		res.end(require('fs').readFileSync(require('path').join(__dirname, 'index.html'))); // or default to index
 	}).pipe(res); // stream
 });
-gun.attach(server);
+gun.wsp(server);
 server.listen(port);
 
 console.log('Server started on port ' + port + ' with /gun');
