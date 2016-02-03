@@ -2,7 +2,7 @@
 	"name": "gun-gaming",
 	"main": "server.js",
 	"description": "No storage layer, just in-memory gaming state and sync."
-,	"version": "0.0.1"
+,	"version": "0.0.2"
 ,	"engines": {
 		"node": "~>4.2.x"
 	}
