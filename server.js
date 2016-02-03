@@ -5,6 +5,15 @@ var gun = Gun({
 	file: false,
 	wire: {put: function(g,cb){
 		cb("Gaming server is in memory only.");
+	},get: function(lex,cb){
+		var soul = lex[Gun._.soul];
+		var node = gun.__.graph[soul];
+		if(!node){
+			return cb(null);
+		}
+		cb(null, node);
+		cb(null, Gun.is.node.soul.ify({}, soul));
+		cb(null, {});
 	}}
 });
 
