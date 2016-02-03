@@ -8,6 +8,7 @@ var gun = Gun({
 	},get: function(lex,cb){
 		var soul = lex[Gun._.soul];
 		var node = gun.__.graph[soul];
+		console.log("GET", soul, node);
 		if(!node){
 			return cb(null);
 		}
