@@ -7,7 +7,7 @@
 		"node": "~>4.2.x"
 	}
 ,	"dependencies": {
-		"gun": "~>0.3.2"
+		"gun": "~>0.3.3"
 	}
 ,	"scripts": {
         "start": "node server.js"
